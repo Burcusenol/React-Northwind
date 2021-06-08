@@ -7,6 +7,7 @@ export default function ProductList() {
   //lifecycle hook
     const [products, setProducts] = useState([])
   
+    
     useEffect(()=>{
         let productService=new ProductService()
         productService.getProducts().then(result=>setProducts(result.data.data))
@@ -16,7 +17,7 @@ export default function ProductList() {
 
     return (
     <div>
-      <Table celled>
+      <Table celled>   
         <Table.Header>  
           <Table.Row>
             <Table.HeaderCell>Ürün Adı</Table.HeaderCell>
